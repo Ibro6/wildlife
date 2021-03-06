@@ -3,6 +3,11 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: none;
+}
+
+*:focus {
+  outline: none;
 }
 
 body {
@@ -156,6 +161,20 @@ a {
           align-items: center;
 }
 
+.articles .slider .button-slider {
+  height: 60px;
+  background-color: transparent;
+  border: none;
+}
+
+.articles .slider .slider-left {
+  margin-right: 60px;
+}
+
+.articles .slider .slider-right {
+  margin-left: 60px;
+}
+
 .articles .slider .slides {
   display: -ms-grid;
   display: grid;
@@ -186,6 +205,7 @@ a {
   font-size: 17px;
   font-weight: 400;
   line-height: 27px;
+  margin: 20px 0;
 }
 
 .articles .slider .slide-1 {
@@ -198,16 +218,6 @@ a {
 
 .articles .slider .slide-3 {
   background-image: url(../assets/img/latest3.jpg);
-}
-
-.articles .slider .slider-left {
-  margin-right: 60px;
-  height: 60px;
-}
-
-.articles .slider .slider-right {
-  margin-left: 60px;
-  height: 60px;
 }
 
 .subscribe {
@@ -225,7 +235,6 @@ a {
 }
 
 .subscribe .form {
-  border-radius: 5px;
   text-align: center;
 }
 
@@ -234,11 +243,16 @@ a {
   height: 50px;
   background-color: transparent;
   margin-right: -5px;
+  border-radius: 5px 0 0 5px;
+  font-size: 23px;
+  padding: 0 5px;
+  border: 1px solid #666666;
 }
 
 .subscribe .form .button {
   height: 50px;
-  border-radius: 0;
+  border-radius: 0 5px 5px 0;
+  font-size: 23px;
 }
 
 .footer {

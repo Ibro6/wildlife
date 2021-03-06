@@ -10,6 +10,11 @@ $font-light: #f7f7f7;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 // BASE
@@ -147,16 +152,33 @@ a {
         letter-spacing: 1px;
     }
 
+    // SLIDER
+
     .slider {
         display: flex;
         align-items: center;
 
+        .button-slider {
+            height: 60px;
+            background-color: transparent;
+            border: none;
+        }
+
+        
+        .slider-left {
+            margin-right: 60px;
+        }
+        
+        .slider-right {
+            margin-left: 60px;
+        }
+        
         .slides {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 60px;
         }
-        
+
         .slide {
             display: flex;
             flex-direction: column;
@@ -169,6 +191,7 @@ a {
                 font-size: 17px;
                 font-weight: 400;
                 line-height: 27px;
+                margin: 20px 0;
             }
         }
 
@@ -182,15 +205,6 @@ a {
             background-image: url(../assets/img/latest3.jpg);
         }
 
-        .slider-left {
-            margin-right: 60px;
-            height: 60px;
-        }
-
-        .slider-right {
-            margin-left: 60px;
-            height: 60px;
-        }
     }
 }
 
@@ -210,7 +224,7 @@ a {
     }
 
     .form {
-        border-radius: 5px;
+        
         text-align: center;
         
         .input {
@@ -218,12 +232,16 @@ a {
             height: 50px;
             background-color: transparent;
             margin-right: -5px;
+            border-radius: 5px 0 0 5px;
+            font-size: 23px;
+            padding: 0 5px;
+            border: 1px solid $font-grey;
         }
 
         .button {
             height: 50px;
-            border-radius: 0;
-            
+            border-radius: 0 5px 5px 0;
+            font-size: 23px;
         }
         
     }
