@@ -40,6 +40,20 @@ a {
     margin: 0 auto;
 }
 
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    * {
+        margin: 10px;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        font-weight: 400;
+    }
+}
+
 .button {
     padding: 10px 15px;
     background-color: transparent;
@@ -54,10 +68,20 @@ a {
     
 }
 
+.navigation-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+    * {
+        margin-left: 30px;
+    }
+}
+
 .button-colored {
     background-color: $orange-main;
     border: none;
-
+    
     &:hover {
         background-color: $orange-light;
     }
@@ -81,30 +105,8 @@ a {
         align-items: center;
         justify-content: space-between;
 
-        .logo {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            * {
-                margin: 10px;
-                text-transform: uppercase;
-            }
-
-            h1 {
-                font-weight: 400;
-            }
-        }
 
         
-            .navigation-list {
-                list-style: none;
-                display: flex;
-                align-items: center;
-                
-                * {
-                    margin-left: 30px;
-                }
-            }
         
     }
 
@@ -202,5 +204,27 @@ a {
 
 .footer {
     background-image: url(../assets/img/footer-bg.jpg);
+    padding: 140px 0;
+    
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 
+    .social-media {
+        display: flex;
+
+        .social-media-item {
+            margin-right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: $font-light;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }
